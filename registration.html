@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register · Cultural Fest 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- floating logo -->
+  <div class="floating-logo" id="floatingLogo">
+    <img src="images/logo.svg" alt="Bishop's Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23C8A951\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'60\' text-anchor=\'middle\' fill=\'%23000000\' font-family=\'Inter\'%3EB%3C/text%3E%3C/svg%3E'">
+    <div class="logo-text">The Bishop's Co-Ed School KLN</div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="floating-nav" id="floatingNav">
+    <button class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#events">Events</a></li>
+      <li><a href="index.html#schedule">Schedule</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#sponsors">Sponsors</a></li>
+      <li><a href="index.html#committee">Committee</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="organizing.html">Organizing</a></li>
+      <li><a href="parent-login.html">Parent</a></li>
+    </ul>
+  </nav>
+
+  <!-- theme toggle -->
+  <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
+
+  <div class="container">
+    <!-- ticket booking card -->
+    <div class="ticket-card" id="registrationCard">
+      <h2 class="text-center mb-4">Book Your Pass</h2>
+      <form id="ticketForm">
+        <div class="mb-3">
+          <label class="form-label">Number of tickets</label>
+          <input type="number" class="form-control" id="ticketQty" min="1" max="10" value="1" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <select class="form-select" id="ticketCategory" required>
+            <option value="Student">Student (age 12+)</option>
+            <option value="Adult">Adult</option>
+            <option value="Family">Family (4+2)</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Parent/Guardian name</label>
+          <input type="text" class="form-control" id="parentName" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Phone (for ticket lookup)</label>
+          <input type="tel" class="form-control" id="phone" pattern="[0-9]{10}" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+
+        <!-- Participant discount section -->
+        <div class="card p-3 mb-3" style="background: var(--card-bg); border: 1px solid var(--glass-border);">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="participantCheck">
+            <label class="form-check-label" for="participantCheck">My ward is a participating student</label>
+          </div>
+          <div class="mt-2">
+            <label class="form-label">Discount password (any non‑empty)</label>
+            <input type="password" class="form-control" id="discountCode" placeholder="Enter code">
+          </div>
+          <small class="text-muted">If checked and code provided, 20% discount will be applied.</small>
+        </div>
+
+        <button type="submit" class="btn-gold w-100">Proceed to Payment</button>
+      </form>
+
+      <!-- ticket lookup section -->
+      <hr class="my-5">
+      <h4 class="text-center gold-text">View Your Tickets</h4>
+      <div class="row g-3 align-items-end">
+        <div class="col-md-8">
+          <label class="form-label">Enter phone number used for booking</label>
+          <input type="tel" class="form-control" id="lookupPhone" placeholder="10-digit mobile">
+        </div>
+        <div class="col-md-4">
+          <button class="btn-gold w-100" id="lookupTicketsBtn">Lookup</button>
+        </div>
+      </div>
+      <div id="lookupResult" class="mt-4"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const lookupBtn = document.getElementById('lookupTicketsBtn');
+      const lookupResult = document.getElementById('lookupResult');
+      lookupBtn.addEventListener('click', () => {
+        const phone = document.getElementById('lookupPhone').value.trim();
+        if (!phone) { alert('Please enter a phone number'); return; }
+        const tickets = JSON.parse(localStorage.getItem(`tickets_${phone}`)) || [];
+        if (tickets.length === 0) {
+          lookupResult.innerHTML = '<p class="text-muted">No tickets found for this phone number.</p>';
+        } else {
+          let html = '<h5>Your Tickets:</h5>';
+          tickets.forEach((t, index) => {
+            html += `<div class="ticket-detail-card mb-3 p-3">
+              <p><strong>Ticket #${index+1}:</strong> ${t.ticketId}</p>
+              <p>Category: ${t.cat} | Qty: ${t.qty}</p>
+              <p>Name: ${t.name} | Email: ${t.email}</p>
+              <p>Booked on: ${t.date}</p>
+            </div>`;
+          });
+          lookupResult.innerHTML = html;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

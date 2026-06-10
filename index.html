@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bishop's Co-Ed School · Cultural Fest 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .footer-note { text-align: center; padding: 20px; font-size: 14px; background: transparent; color: var(--text-secondary); }
+    .footer-note a { color: var(--gold); text-decoration: none; }
+    .circle-img { width: 250px; height: 250px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
+    .event-img, .committee-img-fixed { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+    .sponsor-img { width: 100%; height: 100%; object-fit: contain; padding: 20px; }
+  </style>
+</head>
+<body>
+  <!-- floating logo -->
+  <div class="floating-logo" id="floatingLogo">
+    <img src="images/logo.svg" alt="Bishop's Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23C8A951\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'60\' text-anchor=\'middle\' fill=\'%23000000\' font-family=\'Inter\'%3EB%3C/text%3E%3C/svg%3E'">
+    <div class="logo-text">The Bishop's Co-Ed School KLN</div>
+  </div>
+
+  <!-- floating navbar -->
+  <nav class="floating-nav" id="floatingNav">
+    <button class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+      <li><a href="#committee">Committee</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="organizing.html">Organizing</a></li>
+      <li><a href="parent-login.html">Parent</a></li>
+    </ul>
+  </nav>
+
+  <!-- theme toggle -->
+  <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
+
+  <!-- spacer for fixed header -->
+  <div class="main-spacer"></div>
+
+  <!-- CAROUSEL -->
+  <div class="carousel-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade carousel-custom" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-placeholder" style="background-image: url('images/carousel1.jpg'); background-size: cover; background-position: center;">
+            <h1 style="font-size:52px; font-weight:600;">Annual Cultural Fest 2026</h1>
+            <p style="font-size:20px; margin:20px 0;">where tradition meets tomorrow</p>
+            <a href="registration.html" class="btn-gold">Register interest</a>
+          </div>
+          <div class="carousel-caption-custom">✨ welcome</div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-placeholder" style="background-image: url('images/carousel2.jpg'); background-size: cover; background-position: center;">
+            <h2>Performing Arts</h2>
+          </div>
+          <div class="carousel-caption-custom">Highlights 2025 · music</div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-placeholder" style="background-image: url('images/carousel3.jpg'); background-size: cover; background-position: center;">
+            <h2>Visual Arts</h2>
+          </div>
+          <div class="carousel-caption-custom">Highlights 2025 · art</div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-placeholder" style="background-image: url('images/carousel4.jpg'); background-size: cover; background-position: center;">
+            <h2>Drama & Theatre</h2>
+          </div>
+          <div class="carousel-caption-custom">Highlights 2025 · stage</div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-placeholder" style="background-image: url('images/carousel5.jpg'); background-size: cover; background-position: center;">
+            <h2>Literary</h2>
+          </div>
+          <div class="carousel-caption-custom">Highlights 2025 · words</div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-placeholder" style="background-image: url('images/carousel6.jpg'); background-size: cover; background-position: center;">
+            <h1 style="font-size:48px;">Join the Celebration</h1>
+            <a href="registration.html" class="btn-gold mt-4">REGISTER NOW</a>
+          </div>
+          <div class="carousel-caption-custom">final call</div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+  </div>
+
+  <!-- EVENT INTRO -->
+  <section class="section-padding" id="home">
+    <div class="container-custom">
+      <div class="floating-card">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="display-4 fw-semibold">The 2026 edition</h2>
+            <p class="lead text-secondary">Infinite horizons · 3 days of culture</p>
+            <p class="my-4">Step into a curated celebration of student artistry, innovation, and tradition. Three days, ten events, one community.</p>
+            <p class="fw-bold"><span class="gold-text">Date:</span> 12–14 March 2026<br><span class="gold-text">Time:</span> 10 AM onwards<br><span class="gold-text">Venue:</span> School Amphitheatre</p>
+            <a href="registration.html" class="btn-gold me-3">Register Now</a>
+            <a href="#schedule" class="btn-outline-light">View Schedule</a>
+          </div>
+          <div class="col-lg-6">
+            <div class="event-image" style="height:400px; overflow:hidden; border-radius:24px;">
+              <img src="images/event-intro.jpg" alt="Event intro" class="event-img" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-black');">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS ALTERNATING -->
+  <section class="section-padding" id="events">
+    <div class="container-custom">
+      <h2 class="display-5 fw-semibold mb-5 text-center gold-text">Signature events</h2>
+      
+      <!-- Event 1 -->
+      <div class="event-row row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="event-image" style="height:420px; overflow:hidden;">
+            <img src="images/event1.jpg" alt="Vivacé" class="event-img" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-black');">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="floating-card" data-modal-target="eventModal1" style="cursor:pointer;">
+            <h3>Vivacé · music</h3>
+            <p class="text-secondary">Solo and ensemble performances, from classical to contemporary. 12 March.</p>
+            <button class="btn-gold mt-3" data-modal-target="eventModal1">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="event-row row align-items-center flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="event-image" style="height:420px; overflow:hidden;">
+            <img src="images/event2.jpg" alt="Abhinaya" class="event-img" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-black');">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="floating-card" data-modal-target="eventModal2" style="cursor:pointer;">
+            <h3>Abhinaya · drama</h3>
+            <p class="text-secondary">One-act plays and street theatre. 13 March.</p>
+            <button class="btn-gold mt-3" data-modal-target="eventModal2">View details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="event-row row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="event-image" style="height:420px; overflow:hidden;">
+            <img src="images/event3.jpg" alt="Kalakriti" class="event-img" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-black');">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="floating-card" data-modal-target="eventModal3" style="cursor:pointer;">
+            <h3>Kalakriti · visual arts</h3>
+            <p class="text-secondary">Live painting, sculpture, digital art exhibition. 12–14 March.</p>
+            <button class="btn-gold mt-3" data-modal-target="eventModal3">View details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="section-padding" id="schedule">
+    <div class="container-custom">
+      <h2 class="display-5 fw-semibold mb-5 text-center gold-text">Schedule</h2>
+      <div class="floating-card">
+        <div class="timeline-custom">
+          <div class="timeline-line"></div>
+          <div class="timeline-item" data-modal-target="scheduleModal1">
+            <div class="timeline-time">12 MAR · 10:00</div>
+            <div class="timeline-desc"><div class="timeline-card highlight"><h5>Inauguration & Flag March</h5><p>Chief Guest: Dr. Anjali Sharma</p></div></div>
+          </div>
+          <div class="timeline-item" data-modal-target="scheduleModal2">
+            <div class="timeline-time">12 MAR · 14:00</div>
+            <div class="timeline-desc"><div class="timeline-card"><h5>Vivacé prelims</h5><p>Western & classical vocals</p></div></div>
+          </div>
+          <div class="timeline-item" data-modal-target="scheduleModal3">
+            <div class="timeline-time">13 MAR · 09:30</div>
+            <div class="timeline-desc"><div class="timeline-card"><h5>Abhinaya finals</h5></div></div>
+          </div>
+          <div class="timeline-item" data-modal-target="scheduleModal4">
+            <div class="timeline-time">14 MAR · 18:00</div>
+            <div class="timeline-desc"><div class="timeline-card highlight"><h5>Prize ceremony & showcase</h5></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section-padding" id="about">
+    <div class="container-custom">
+      <div class="floating-card">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-5 text-center">
+            <img src="images/principal.jpg" alt="Principal Dr. Aruna Nair" class="circle-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'250\' height=\'250\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23333\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23aaa\'%3EPrincipal%3C/text%3E%3C/svg%3E';">
+            <p class="mt-3 fst-italic">Dr. Aruna Nair, Principal</p>
+          </div>
+          <div class="col-md-7">
+            <h3>Message from the Principal</h3>
+            <p class="fs-5 fst-italic">“Culture is the bedrock of character. This fest is an ode to our students’ boundless creativity.”</p>
+            <p>— Dr. Aruna Nair</p>
+            <div class="placeholder-black" style="height:40px; width:200px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section class="section-padding" id="sponsors">
+    <div class="container-custom">
+      <h2 class="display-5 fw-semibold mb-5 text-center gold-text">Patrons & Sponsors</h2>
+      <div class="sponsor-grid">
+        <div class="sponsor-item" data-modal-target="sponsorModal1">
+          <img src="images/sponsor1.jpg" alt="Sponsor 1" class="sponsor-img" onerror="this.style.display='none'; this.parentElement.innerHTML='Logo 1';">
+        </div>
+        <div class="sponsor-item" data-modal-target="sponsorModal2">
+          <img src="images/sponsor2.jpg" alt="Sponsor 2" class="sponsor-img" onerror="this.style.display='none'; this.parentElement.innerHTML='Logo 2';">
+        </div>
+        <div class="sponsor-item" data-modal-target="sponsorModal3">
+          <img src="images/sponsor3.jpg" alt="Sponsor 3" class="sponsor-img" onerror="this.style.display='none'; this.parentElement.innerHTML='Logo 3';">
+        </div>
+        <div class="sponsor-item" data-modal-target="sponsorModal4">
+          <img src="images/sponsor4.jpg" alt="Sponsor 4" class="sponsor-img" onerror="this.style.display='none'; this.parentElement.innerHTML='Logo 4';">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITTEE -->
+  <section class="section-padding" id="committee">
+    <div class="container-custom">
+      <h2 class="display-5 fw-semibold mb-5 text-center gold-text">Organizing committee</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="committee-card" data-modal-target="committeeModal1">
+            <img src="images/sahil.jpeg" alt="Rohan Mehra" class="committee-img" style="width:130px; height:130px; border-radius:50%; object-fit:cover;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'130\' height=\'130\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23333\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23aaa\'%3EPhoto%3C/text%3E%3C/svg%3E';">
+            <h4>Sahil Agarwal</h4>
+            <p class="text-secondary">Teacher Coordinator</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="committee-card" data-modal-target="committeeModal2">
+            <img src="images/mihir.jpeg" alt="Ananya Nair" class="committee-img" style="width:130px; height:130px; border-radius:50%; object-fit:cover;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'130\' height=\'130\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23333\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23aaa\'%3EPhoto%3C/text%3E%3C/svg%3E';">
+            <h4>Mihir Abhale</h4>
+            <p class="text-secondary">Student Chair</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="committee-card" data-modal-target="committeeModal3">
+            <img src="images/anushka.PNG" alt="Kabir Khan" class="committee-img" style="width:130px; height:130px; border-radius:50%; object-fit:cover;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'130\' height=\'130\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23333\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23aaa\'%3EPhoto%3C/text%3E%3C/svg%3E';">
+            <h4>Anushka</h4>
+            <p class="text-secondary">Technical Head</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="committee-card" data-modal-target="committeeModal4">
+            <img src="images/yash.PNG" alt="Yash" class="committee-img" style="width:130px; height:130px; border-radius:50%; object-fit:cover;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'130\' height=\'130\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23333\' /%3E%3Ctext x=\'50\' y=\'70\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23aaa\'%3EPhoto%3C/text%3E%3C/svg%3E';">
+            <h4>Yash</h4>
+            <p class="text-secondary">Events Coordinator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-padding" id="contact">
+    <div class="container-custom">
+      <div class="floating-card">
+        <h2 class="display-5 fw-semibold mb-5">Get in touch</h2>
+        <div class="row g-5">
+          <div class="col-md-5">
+            <p><i class="fas fa-map-pin gold-text me-2"></i>The Bishop's Coeducation School<br>East Ave, near Trump Towers, Palace View Society, Nilanjali, Kalyani Nagar, Pune 411006</p>
+            <p><i class="fas fa-phone gold-text me-2"></i>+91 20 1234 5678</p>
+            <p><i class="fas fa-envelope gold-text me-2"></i>fest2026@bishopskln.edu</p>
+            <form id="contactForm">
+              <input class="form-control mb-3" placeholder="Your name" required>
+              <input type="email" class="form-control mb-3" placeholder="Email" required>
+              <textarea class="form-control mb-3" rows="3" placeholder="Message" required></textarea>
+              <button class="btn-gold w-100">Send</button>
+            </form>
+         </div>
+<div class="col-md-7">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.475294267772!2d73.90314787496378!3d18.55259878254724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c11033d323ed%3A0x5b0288df86830594!2sThe%20Bishop&#39;s%20Co-Ed%20School!5e0!3m2!1sen!2sin!4v1775649266752!5m2!1sen!2sin"
+    frameborder="0" 
+    style="border:0; width: 100%; height: 400px;" 
+    allowfullscreen="" 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+         
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALS (same as before) -->
+  <!-- Event Modal 1 -->
+  <div class="modal fade" id="eventModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Vivacé · Music</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Date:</strong> 12–13 March 2026</p>
+          <p><strong>Venue:</strong> School Auditorium</p>
+          <p><strong>Description:</strong> Solo and ensemble performances across genres – classical, western, fusion. Prelims on 12th, finals on 13th.</p>
+          <p><strong>Rules:</strong> Max 5 minutes per performance. Backing tracks allowed (submit by 10 March).</p>
+          <p><strong>Coordinator:</strong> Ms. Sunita Rao</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-gold" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Modal 2 -->
+  <div class="modal fade" id="eventModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Abhinaya · Drama</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Date:</strong> 13 March 2026</p>
+          <p><strong>Venue:</strong> Open Air Theatre</p>
+          <p><strong>Description:</strong> One-act plays and street theatre. Teams of 6–12.</p>
+          <p><strong>Rules:</strong> 20–30 minutes. Props provided by school upon request.</p>
+          <p><strong>Coordinator:</strong> Mr. Rajesh Khanna</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-gold" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Modal 3 -->
+  <div class="modal fade" id="eventModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Kalakriti · Visual Arts</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Date:</strong> 12–14 March 2026</p>
+          <p><strong>Venue:</strong> Art Gallery & Campus</p>
+          <p><strong>Description:</strong> Live painting, sculpture, digital art, photography exhibition.</p>
+          <p><strong>Rules:</strong> Submit entries by 10 March. Live painting on 12th.</p>
+          <p><strong>Coordinator:</strong> Ms. Meera Desai</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-gold" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schedule Modals (simplified) -->
+  <div class="modal fade" id="scheduleModal1" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Inauguration</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Chief Guest Dr. Anjali Sharma, flag march, cultural procession.</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="scheduleModal2" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Vivacé Prelims</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Western and classical vocals. Open to all participants.</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="scheduleModal3" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Abhinaya Finals</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Final round of one-act plays. 5 best teams compete.</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="scheduleModal4" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Prize Ceremony</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Awards and closing showcase by winners.</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+
+  <!-- Sponsor Modals -->
+  <div class="modal fade" id="sponsorModal1" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Sponsor 1</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">ABC Corp – Title Sponsor</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="sponsorModal2" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Sponsor 2</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">XYZ Ltd – Co-Sponsor</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="sponsorModal3" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Sponsor 3</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">PQR Industries – Partner</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="sponsorModal4" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Sponsor 4</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">LMN Trust – Supporter</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+
+  <!-- Committee Modals -->
+  <div class="modal fade" id="committeeModal1" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Rohan Mehra</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Teacher Coordinator (Performing Arts). Email: r.mehra@bishopskln.edu</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="committeeModal2" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Ananya Nair</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Student Chair, Grade 12. Email: ananya.n@student.bishopskln.edu</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  <div class="modal fade" id="committeeModal3" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Kabir Khan</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body">Technical Head (Light & Sound).</div><div class="modal-footer"><button class="btn-gold" data-bs-dismiss="modal">Close</button></div></div></div></div>
+
+  <!-- Footer -->
+  <div class="footer-note">
+    <p>© 2026 The Bishop's Co-Ed School · <a href="committee-login.html">Committee Login</a> (event management)</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
