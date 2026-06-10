@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Web-Technology-Mini-Project
 
 <hr/>
@@ -47,3 +48,6 @@ committee1.jpg, committee2.jpg, committee3.jpg</p>
 All logins are simulated and data is stored in your browser's localStorage.
 
 <hr/>
+=======
+# Annual_function_frontend
+>>>>>>> 0f2ad3b03e9a603578c3831e2e7efd8ff4f9ad5e
